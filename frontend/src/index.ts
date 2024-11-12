@@ -365,7 +365,7 @@ export class App extends LiteElement {
                   : "w-6 lg:w-[10.5rem]"} h-6 bg-cover bg-no-repeat"
                 style="background-image: url(${brandLockupColor})"
                 role="img"
-                title="Browsertrix logo"
+                title="DMCapTool logo"
               ></div>
             </a>
             ${when(
@@ -633,43 +633,6 @@ export class App extends LiteElement {
       <footer
         class="mx-auto box-border flex w-full max-w-screen-desktop flex-col items-center justify-between gap-4 p-3 md:flex-row"
       >
-        <div>
-          <a
-            class="flex items-center gap-2 leading-none text-neutral-400 hover:text-primary"
-            href="https://github.com/webrecorder/browsertrix"
-            target="_blank"
-            rel="noopener"
-          >
-            <sl-icon name="github" class="size-4 text-base"></sl-icon>
-            ${msg("Source Code")}
-          </a>
-        </div>
-        <div>
-          <a
-            class="flex items-center gap-2 leading-none text-neutral-400 hover:text-primary"
-            href="https://forum.webrecorder.net/c/help/5"
-            target="_blank"
-            rel="noopener"
-          >
-            <sl-icon name="patch-question" class="size-4 text-base"></sl-icon>
-            ${msg("Help Forum")}
-          </a>
-        </div>
-        ${this.version
-          ? html`
-              <div class="flex items-center justify-center gap-2 leading-none">
-                <btrix-copy-button
-                  class="size-4 text-neutral-400"
-                  .getValue=${() => this.version}
-                  content=${msg("Copy Browsertrix Version")}
-                  size="x-small"
-                ></btrix-copy-button>
-                <span class="font-monostyle text-xs text-neutral-400">
-                  ${this.version}
-                </span>
-              </div>
-            `
-          : nothing}
       </footer>
     `;
   }

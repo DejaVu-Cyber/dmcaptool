@@ -1,0 +1,49 @@
+# Resources / Node Types
+main_node_type: main
+ 
+crawler_node_type: crawling
+redis_node_type: crawling
+
+crawler_pull_policy: "Always"
+
+crawler_browser_instances: 4
+
+crawler_storage: "100Gi"
+
+# Registry
+
+# DB
+mongo_local: true
+
+# Storage
+minio_local: false
+
+storages:
+  - name: "default"
+    access_key: "DO00PKKZ8RVKMHVPW9WA"
+    secret_key: "sEsPDut3BtBN26QJrUGndVjWS3uccSkO9KZog3MSkbM"
+
+    endpoint_url: "https://nyc3.digitaloceanspaces.com/dmcap/zhcrawls/"
+
+
+# Domain
+ingress:
+  host: zhcap.darkmatterdemo.com
+  cert_email: it@dejavucyber.com
+  tls: true
+
+
+# Signing
+
+
+# User Auth
+superuser:
+  email: steve@dejavucyber.com
+  password: R00tb33r123!
+
+registration_enabled: "0"
+
+default_org: "zhcap"
+
+
+# Admin Addons
